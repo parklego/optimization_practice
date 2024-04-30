@@ -8,11 +8,7 @@ function App() {
   // console.log(import.meta.env);
   return (
     <>
-      <div
-        css={{
-          background: "red",
-        }}
-      >
+      <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
