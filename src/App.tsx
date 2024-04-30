@@ -1,34 +1,37 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import Text from "./components/shared/Text";
+import Button from "./components/shared/Button";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  // console.log(import.meta.env);
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Text typograph="t1" color="blue">
+        안녕하세요
+      </Text>
+      <Text typograph="t2" color="gray">
+        안녕하세요
+      </Text>
+      <Text typograph="t3" color="green">
+        안녕하세요
+      </Text>
+      <Text typograph="t4" color="red">
+        안녕하세요
+      </Text>
+      <Text>안녕하세요</Text>
+      <div style={{ width: "100%", height: 10, background: "black" }}></div>
+      <Button color="primary">클릭미</Button>
+      <Button color="primary" weak={true}>
+        클릭미
+      </Button>
+      <Button color="success">클릭미</Button>
+      <Button color="success" weak={true}>
+        클릭미
+      </Button>
+      <Button color="error">클릭미</Button>
+      <Button color="error" weak={true}>
+        클릭미
+      </Button>
+      <Button full>클릭미</Button>
+      <Button disabled>클릭미</Button>
     </>
   );
 }

@@ -84,6 +84,15 @@ export default css`
     font: inherit;
   }
 
+  button {
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
   /* 행 속성이 없는 textarea가 너무 작지 않도록 합니다. */
   textarea:not([rows]) {
     min-height: 10em;
