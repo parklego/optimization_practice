@@ -2,8 +2,11 @@ import Text from "./components/shared/Text";
 import Button from "./components/shared/Button";
 import Input from "./components/shared/Input";
 import TextField from "./components/shared/TextField";
+import Alert from "./components/shared/Alert";
+import { useState } from "react";
 
 function App() {
+  const [open, setOpen] = useState(false);
   return (
     <>
       <Text typograph="t1" color="blue">
@@ -41,6 +44,18 @@ function App() {
         label="아이디"
         hasError={true}
         helpMessage="아이디를 입력해주세요."
+      />
+      <div style={{ width: "100%", height: 10, background: "black" }}></div>
+      <Button weak={true} onClick={() => setOpen(true)}>
+        Open Alert
+      </Button>
+      <Alert
+        open={open}
+        title="alert"
+        description="테스트중입니다."
+        onButtonClick={() => {
+          setOpen(false);
+        }}
       />
     </>
   );

@@ -4,6 +4,11 @@ import { colorPalette } from "./colors";
 export default css`
   ${colorPalette}
 
+  :root {
+    --dimmed-z-index: 10;
+    --alert-z-index: 11;
+  }
+
   /* box-sizing 규칙을 명시합니다. */
   *,
   *::before,
