@@ -1,5 +1,7 @@
 import Text from "./components/shared/Text";
 import Button from "./components/shared/Button";
+import Input from "./components/shared/Input";
+import TextField from "./components/shared/TextField";
 
 function App() {
   return (
@@ -32,6 +34,14 @@ function App() {
       </Button>
       <Button full>클릭미</Button>
       <Button disabled>클릭미</Button>
+      <Input aria-invalid={false} />
+      <Input aria-invalid={true} />
+      <TextField label="아이디" />
+      <TextField
+        label="아이디"
+        hasError={true}
+        helpMessage="아이디를 입력해주세요."
+      />
     </>
   );
 }
