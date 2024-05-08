@@ -2,11 +2,11 @@ import Text from "./components/shared/Text";
 import Button from "./components/shared/Button";
 import Input from "./components/shared/Input";
 import TextField from "./components/shared/TextField";
-import Alert from "./components/shared/Alert";
-import { useState } from "react";
+import { useAlertContext } from "./context/AlertContext";
 
 function App() {
-  const [open, setOpen] = useState(false);
+  const { open } = useAlertContext();
+
   return (
     <>
       <Text typograph="t1" color="blue">
@@ -46,17 +46,20 @@ function App() {
         helpMessage="아이디를 입력해주세요."
       />
       <div style={{ width: "100%", height: 10, background: "black" }}></div>
-      <Button weak={true} onClick={() => setOpen(true)}>
+      <Button
+        weak={true}
+        onClick={() =>
+          open({
+            title: "카드신청완료",
+            description: "내역페이지를 확인해주세요",
+            onButtonClick: () => {
+              //
+            },
+          })
+        }
+      >
         Open Alert
       </Button>
-      <Alert
-        open={open}
-        title="alert"
-        description="테스트중입니다."
-        onButtonClick={() => {
-          setOpen(false);
-        }}
-      />
     </>
   );
 }

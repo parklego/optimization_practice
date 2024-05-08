@@ -4,9 +4,13 @@ import App from "./App.tsx";
 import { Global } from "@emotion/react";
 import globalStyles from "./styles/globalStyles.ts";
 
+import { AlertContextProvider } from "./context/AlertContext";
+
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <Global styles={globalStyles} />
-    <App />
+    <AlertContextProvider>
+      <App />
+    </AlertContextProvider>
   </React.StrictMode>
 );
