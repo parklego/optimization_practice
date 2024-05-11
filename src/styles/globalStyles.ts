@@ -39,6 +39,13 @@ export default css`
     padding: 0;
   }
 
+  a,
+  a:link,
+  a:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+
   /* list를 role값으로 갖는 ul, ol 요소의 기본 목록 스타일을 제거합니다. */
   ul[role="list"],
   ol[role="list"] {
