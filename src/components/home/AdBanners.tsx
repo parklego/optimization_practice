@@ -12,7 +12,6 @@ import "swiper/css";
 const AdBanners = () => {
   const { data } = useQuery(["AdBanners"], () => getBanners());
 
-  console.log("data", data);
   return (
     <Container>
       <Swiper spaceBetween={8}>
